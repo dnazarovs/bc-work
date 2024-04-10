@@ -1,0 +1,18 @@
+<p id="notice" style="color: green"><%= notice %></p>
+
+<h1 class="center-text">Posts</h1>
+
+<div id="posts" class="posts-container">
+  <% @posts.each do |post| %>
+    <div class="post-wrapper">
+      <%= link_to post_url(post) do %>
+         <%= render post %>
+      <% end %>
+    </div>
+  <% end %>
+</div>
+
+<div class="new-post-link">
+  <%= link_to "New post", new_post_path, class: "submit-btn" %>
+</div>
+

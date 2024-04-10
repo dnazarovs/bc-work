@@ -1,0 +1,339 @@
+/* Reset some basic elements for a clean slate */
+body, h2, form {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+  
+  /* Center and style the main header */
+  .center-text {
+    text-align: center;
+    font-size: 2em;
+    color: #333;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  
+  /* Style the form for a modern look */
+  .user-form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    background: #fff;
+  }
+  
+  .field {
+    margin-bottom: 15px;
+  }
+  
+  .field label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  .input-field {
+    width: calc(100% - 20px); /* Full width minus padding */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Include padding in width */
+  }
+  
+  /* Improve the submit button's appearance */
+  .submit-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    color: white;
+    background-color: #5cb85c;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .submit-btn:hover {
+    background-color: #4cae4c;
+  }
+  
+  /* Additional styles for other links and info */
+  .user-form .links a,
+  .user-form em {
+    font-size: 0.9em;
+    color: #666;
+    text-align: center;
+    display: block;
+    margin-top: 10px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 480px) {
+    .user-form {
+      width: 90%;
+      margin: 20px auto;
+    }
+  }
+  
+  /* Additional styles for the checkbox */
+.field input[type="checkbox"] {
+    margin-right: 5px;
+  }
+  
+  /* Styling labels next to checkbox */
+  .field label {
+    display: inline-block;
+    margin-top: 5px;
+  }
+  
+  /* Style for checkbox container */
+  .field {
+    padding-bottom: 10px;
+  }
+  
+  /* Link container */
+.devise-links {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Style each link as a button */
+  .devise-links a {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    background-color: #f7f7f7;
+    color: #5cb85c;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    transition: all 0.3s;
+  }
+  
+  /* Hover effect for links */
+  .devise-links a:hover {
+    background-color: #e7e7e7;
+    text-decoration: none;
+    color: #4cae4c;
+  }
+  
+  /* Style for OAuth buttons, if present */
+  .oauth-btn {
+    background-color: #e7e7e7; /* A neutral background */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 5px;
+    padding: 10px;
+    text-align: center;
+    display: block;
+  }
+  
+  .oauth-btn:hover {
+    background-color: #d7d7d7;
+  }
+  
+  /* Navbar styles */
+.navbar {
+  background-color: #333;
+  overflow: hidden;
+  padding: 10px 0;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+
+.navbar .button-to {
+    display: inline-block;
+    text-align: center;
+}
+  
+.navbar .sign-out-btn {
+    font-size: 16px;
+    color: white;
+    background-color: #f44336; /* Red color for sign out to indicate a destructive action */
+    border: none;
+    padding: 10px 15px;
+    margin-left: 10px; /* To give some space from other links */
+    text-decoration: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Styles for error messages */
+#error_explanation {
+    padding: 15px;
+    background-color: #f2dede;
+    border: 1px solid #ebccd1;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    color: #a94442;
+  }
+  
+  #error_explanation h2 {
+    text-align: center;
+    font-size: 1.2em;
+  }
+  
+  #error_explanation ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  #error_explanation ul li {
+    margin-bottom: 10px;
+  }
+  
+  /* Styles for displaying posts */
+.post-display {
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    background: #fff;
+  }
+  
+  .post-attribute {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .post-attribute strong {
+    font-weight: bold;
+  }
+  
+  .post-attribute span {
+    margin-left: 10px; /* Add some space between the label and value */
+    display: inline-block;
+    color: #555;
+  }
+
+  /* Styles for the notice */
+#notice {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Styles for the posts container */
+  .posts-container {
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .post-wrapper {
+    background: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  /* Styles for the post actions like 'Show this post' */
+  .post-actions {
+    text-align: right; /* Align the 'Show' link to the right */
+  }
+  
+  .post-show-link {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .post-show-link:hover {
+    background-color: #45a049;
+  }
+  
+  /* Style for the 'New Post' link */
+  .new-post-link {
+    text-align: center; /* Center the 'New Post' link */
+    margin-top: 20px;
+  }
+  
+/* Styles for post action links like 'Edit' and 'Destroy' */
+.post-actions {
+    text-align: right;
+    margin-top: 20px;
+  }
+  
+  .post-action-link {
+    background-color: #f7f7f7;
+    color: #333;
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 4px;
+    display: inline-block;
+    margin: 0 5px; /* Space between buttons */
+    transition: all 0.3s;
+  }
+  
+  .edit-link {
+    border: 1px solid #ccc;
+  }
+  
+  .destroy-link {
+    background-color: #f44336; /* Red color for destructive action */
+    color: white;
+    border: none;
+  }
+  
+  .destroy-link:hover {
+    background-color: #d32f2f;
+  }
+  
+  .post-action-link:hover {
+    background-color: #e7e7e7;
+    color: #333;
+  }
+  
+  /* Styles for the 'Back to posts' link */
+  .back-link {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .back-link .post-action-link {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  /* You can adjust the width as needed or make it responsive */
+  @media (max-width: 480px) {
+    .post-display {
+      width: 90%;
+      margin: 20px auto;
+    }
+  }
+  

@@ -1,0 +1,15 @@
+<p id="notice" style="color: green"><%= notice %></p>
+
+<%= render @post %>
+
+<% if user_signed_in? && current_user == @post.user %>
+  <div class="post-actions">
+    <%= link_to "Edit this post", edit_post_path(@post), class: "post-action-link edit-link" %>
+    <%= button_to "Destroy this post", @post, method: :delete, class: "post-action-link destroy-link", data: { confirm: "Are you sure?" } %>
+  </div>
+<% end %>
+
+<div class="back-link">
+  <%= link_to "Back to posts", posts_path, class: "post-action-link" %>
+</div>
+
