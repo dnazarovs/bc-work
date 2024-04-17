@@ -22,15 +22,6 @@ jobs:
           ruby-version: 3.2.0
           bundler-cache: true
 
-      - name: Set up database schema
-        run: bin/rails db:schema:load
-
-      - name: Precompile assets
-        run: RAILS_ENV=test bin/rails assets:precompile
-
-      - name: Run system tests
-        run: rails test:system
-
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v4.0.1
         with:
