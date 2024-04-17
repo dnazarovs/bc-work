@@ -7,8 +7,12 @@ class User < ApplicationRecord
 
 
   has_many :posts
-  validates :name, presence: true, format: { with: NAME_REGEX }
-  validates :last_name, presence: true, format: { with: NAME_REGEX }
-  validates :age, presence: true, numericality: { only_integer: true, greater_or_equal_than: 18 }
-  validates :email, presence: true, uniqueness: true, format: { with: EMAIL_REGEX, multiline: true }
+  validates :name, presence: true
+  validates :name, format: { with: NAME_REGEX, message: 'should include only symbols' }, if: -> { name.present? }
+  validates :last_name, presence: true
+  validates :last_name, format: { with: NAME_REGEX, message: 'should include only symbols' }, if: -> { last_name.present? }
+  validates :age, presence: true
+  validates :age, numericality: { only_integer: true, greater_than: 17, lower_than: 100 }, if: -> { age.present? }
+  validates :email, presence: true, uniqueness: true
+  validates :email, format: { with: EMAIL_REGEX }, if: -> { email.present? }
 end

@@ -1,6 +1,8 @@
 <h2 class="center-text">Log in</h2>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: 'user-form' }) do |f| %>
+<%= render "devise/shared/error_messages", resource: resource %>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: 'user-form',  novalidate: true }) do |f| %>
   <div class="field">
     <%= f.label :email %>
     <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'input-field' %>

@@ -1,0 +1,3 @@
+invalid_user:
+  email: 'invalid_email@example.com'
+  password: 'password123'

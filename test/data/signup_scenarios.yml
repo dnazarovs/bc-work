@@ -1,0 +1,100 @@
+valid:
+  valid_user:
+    email: 'test@example.com'
+    name: 'daniils'
+    last_name: 'User'
+    age: 25
+    password: 'password123'
+    password_confirmation: 'password123'
+invalid:
+  invalid_email:
+    email: 'invalid_email'
+    name: 'daniils'
+    last_name: 'User'
+    age: 25
+    password: 'password123'
+    password_confirmation: 'password123'
+  blank_email:
+    email: ''
+    name: 'daniils'
+    last_name: 'User'
+    age: 25
+    password: 'password123'
+    password_confirmation: 'password123'  
+  blank_name:
+    email: 'test@example.com'
+    name: ''
+    last_name: 'User'
+    age: 25
+    password: 'password123'
+    password_confirmation: 'password123'
+  invalid_name:
+    email: 'test@example.com'
+    name: 'Invalid Name!'
+    last_name: 'User'
+    age: 25
+    password: 'password123'
+    password_confirmation: 'password123'
+  blank_last_name:
+    email: 'test@example.com'
+    name: 'daniils'
+    last_name: ''
+    age: 25
+    password: 'password123'
+    password_confirmation: 'password123'
+  invalid_last_name:
+    email: 'test@example.com'
+    name: 'daniils'
+    last_name: 'invalid last name'
+    age: 25
+    password: 'password123'
+    password_confirmation: 'password123'
+  age_below_18:
+    email: 'test@example.com'
+    name: 'daniils'
+    last_name: 'User'
+    age: 17
+    password: 'password123'
+    password_confirmation: 'password123'  
+  blank_age:
+    email: 'test@example.com'
+    name: 'daniils'
+    last_name: 'User'
+    age: ' '
+    password: 'password123'
+    password_confirmation: 'password123'
+  age_not_a_number:
+    email: 'test@example.com'
+    name: 'daniils'
+    last_name: 'User'
+    age: 'twenty-five'
+    password: 'password123'
+    password_confirmation: 'password123'
+  age_not_an_integer:
+    email: 'test@example.com'
+    name: 'daniils'
+    last_name: 'User'
+    age: 11.5
+    password: 'password123'
+    password_confirmation: 'password123'
+  blank_password:
+    email: 'test@example.com'
+    name: 'daniils'
+    last_name: 'User'
+    age: 25
+    password: ''
+    password_confirmation: ''
+  password_too_short:
+    email: 'test@example.com'
+    name: 'daniils'
+    last_name: 'User'
+    age: 25
+    password: 'pass'
+    password_confirmation: 'pass'
+  password_confirmation_doesnt_match:
+    email: 'test@example.com'
+    name: 'daniils'
+    last_name: 'User'
+    age: 25
+    password: 'password123'
+    password_confirmation: 'password456'
