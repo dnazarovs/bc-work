@@ -1,0 +1,40 @@
+name: "Ruby on Rails CI"
+on:
+  push:
+    branches: [ "master", "develop" ]
+  pull_request:
+    branches: [ "master" ]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    env:
+      RAILS_ENV: test
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install SQLite3
+        run: sudo apt-get install libsqlite3-dev
+
+      - name: Install Ruby and gems
+        uses: ruby/setup-ruby@v1.127.0
+        with:
+          ruby-version: 3.2.0
+          bundler-cache: true
+
+      - name: Set up database schema
+        run: bin/rails db:schema:load
+
+      - name: Precompile assets
+        run: RAILS_ENV=test bin/rails assets:precompile
+
+      - name: Run system tests
+        run: rails test:system
+
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v4.0.1
+        with:
+          fail_ci_if_error: true
+          files: ./coverage1.xml
+          token: ${{ secrets.CODECOV_TOKEN }}
+          slug: dnazarovs/bc-work
